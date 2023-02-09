@@ -183,11 +183,7 @@ server
 |   └── testRouter.js
 └── views
     └── index.ejs
-└── .eslinttrc.cjs
-└── babel.conflig.js
-└── jest.config.js
-└──prettierrc.json
-└── cypress.json
+
 ```
 
 ### 2.1 Client structure
