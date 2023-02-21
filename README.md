@@ -1,8 +1,20 @@
-![Page view](./client/src/assets/courier4me.png)
+# Courier4me - Class 39 final project
 
-# Courier4Me
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://c39-hyf.herokuapp.com/">
+    <img src="https://c39-hyf.herokuapp.com/dbfa53255332024cec7d8f3a45c01028.png" alt="Our Logo" width="250" height="150">
+  </a>
+  </div>
 
-This is the final project for the HackYourFuture curriculum we did as a class using the MERN stack by following the agile methodology with our team and a group of mentors. A quick guide to what we built:
+## About the Project
+
+This is the final project for the HackYourFuture curriculum we did as a class using the MERN stack by following the agile methodology with our team and a group of mentors. The web version of this project can be seen on [Heroku](https://c39-hyf.herokuapp.com/). A quick guide to what we built:
+
+<div align="center">
+<img src="https://res.cloudinary.com/dl44q0v9r/image/upload/v1675943679/ezgif.com-gif-maker_nsilhc.gif" width="800" height="400" alt="WelcomeScreen">
+</div>
 
 ## Description
 
@@ -20,28 +32,6 @@ This app is built to provide a platform to deliver your packages for the cheapes
 - Users can see their delivery history on their account dashboard and can delete the history if they want.
 - Users can see courier4me news in the press page and also access the frequently asked questions on the FAQ page to find answers to some common questions.
 - The user can reach out to the customer support team through call, email or contact form at the contact page.
-
-## Color Guide
-
-![Page view](./client/src/assets/color.png.jpg)
-
-Here is a working live demo :[Demo](https://c39-hyf.herokuapp.com/)
-
-## 1. Setup
-
-First, to setup all the directories run the following in the main directory:
-
-`npm install`
-
-`npm run setup`
-
-The first command will install `cypress` and some small libraries needed for running the rest of the commands. The second will go into the `client` and `server` directories and set those up to be ran.
-
-In the `client` and `server` directory there are two `.env.example` files. Create a copy and rename that to `.env`. Then follow the instructions in those files to fill in the right values.
-
-To run the app in dev mode you can run the following command in the main directory:
-
-`npm run dev`
 
 ## 2. Code structure
 
@@ -183,42 +173,39 @@ server
 |   └── testRouter.js
 └── views
     └── index.ejs
-
+└── .eslinttrc.cjs
+└── babel.conflig.js
+└── jest.config.js
+└──prettierrc.json
+└── cypress.json
 ```
 
 ### 2.1 Client structure
 
 - `public` || public facing client code
-- `__tests__` || any `jest` tests for specific components will be in a `__tests__` folder on the same level
-- `__testUtils__` || any code that is only being used in the tests is put in the `__testUtils__` folder to separate that away from the rest of the code
 - `components` || all of our shared components that are used over multiple pages
 - `hooks` || all of our custom hooks
-- `pages` || the page components of our app, any routing will go between these components
+- `pages` || the page components of our app, all routing goes between these components
 - `pages/components` || components used specifically on those pages
 - `util` || any utility functions that can be used anywhere on the client side
 - `index.jsx` || the start point of the client
 
-### 2.2 Cypress structure
-
-- `fixtures` || any data/files that `cypress` needs can be placed here
-- `integration` || all of our tests are in here, separated in folders based on the pages in our app
-- `plugins` || any plugins for our `cypress` configuration can be placed here
-- `support` || custom commands and other support files for `cypress` can be placed here
-
 ### 2.3 Server structure
 
-- `__tests__` || any `jest` tests for the api endpoints as that is our testing strategy for the backend
-- `__testUtils__` || any code that is only being used in the tests is put in the `__testUtils__` folder to separate that away from the rest of the code
 - `controllers` || all of our controller functions that interact with the database
 - `db` || all of our configuration for the database
-- `models` || all of our `mongoose` models will be placed here
+- `models` || all of our `mongoose` models are placed here
 - `routes` || code to match up the API with our controllers
 - `util` || any utility functions that can be used anywhere on the server side
 - `index.js` || the start point of the server
 
 ## 3. Stack / external libraries
 
-The base stack of the app is a MERN stack (Mongoose, Express, React, Node). Next to that we make use of the following extras:
+The app was built in MERN stack (Mongoose, Express, React, Node) using the knowledge gained by studying different modules of Web Development at HackYourFuture curriculum especially:
+
+<img src="https://img.shields.io/badge/-HTML:5-750000?logo=html5" height="30" alt="HTML:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-CSS-4c9ee8?logo=css3" height="30" alt="CSS:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-Javascript-000000?logo=javascript" height="30" alt="JavaScript">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-0cc0e7?logo=visual-studio" height="30" alt="VSC">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-React-gray?logo=react" height="30" alt="React">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-MongoDB-000000?logo=mongodb" height="30" alt="MongoDB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-NodeJs-ffffff?logo=nodedotjs" height="30" alt="MongoDB">
+
+Next to that we make use of the following extras:
 
 ### 3.1 Configuration libraries
 
@@ -233,8 +220,6 @@ For more information on how these work together including the automatic deployme
 
 ### 3.2 Client-side libraries
 
-- `@testing-library/*` || We use React Testing Library to write all of our tests. See [docs](https://testing-library.com/docs/react-testing-library/intro/)
-- `jest` || To run our tests and coverage. See [docs](https://jestjs.io/)
 - `jest-fetch-mock` || To mock out the backend for our testing purposes. See [docs](https://github.com/jefflau/jest-fetch-mock#readme)
 - `prop-types` || To type-check our components. See [docs](https://github.com/facebook/prop-types)
 
@@ -246,3 +231,45 @@ For more information on how these work together including the automatic deployme
 - `mongodb-memory-server` || To mock out our database in our backend tests. See [docs](https://github.com/nodkz/mongodb-memory-server)
 - `cors` || To open up our API. See [docs](https://github.com/expressjs/cors#readme)
 - `mongoose` || To add schemas to our database. See [docs](https://mongoosejs.com/)
+
+## Roadmap
+
+This is a basic app that fulfills the requirements for the graduation project at HackYourFuture. However, the team intends to keep improving upon it with the following roadmap.
+
+- [x] Responsive app
+- [x] Follow the MERN stack
+- [x] Have a frontend connected to the backend alongwith the Database.
+- [x] Loading/error handling.
+- [ ] Additional Options
+  - [ ] Payment system
+  - [ ] Star based reviewing system for the provided services.
+
+## Contributing
+
+This is in no way a perfect application. We, as a team, are in the process of learning and implementing knowledge. Therefore, contributions, suggestions and feedbacks are **heartily welcome**. If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Our Team
+
+[<img src="https://img.shields.io/badge/-Asiye Gokalp-000?logo=github" height="30" alt="Github">](https://github.com/AsiyeGokalp)
+[<img src="https://img.shields.io/badge/-Betul Yasar-222?logo=github" height="30" alt="Github">](https://github.com/betysr)
+[<img src="https://img.shields.io/badge/-Heba Salem-444?logo=github" height="30" alt="Github">](https://github.com/hebaMak)
+[<img src="https://img.shields.io/badge/-Nida ul Zafar-444?logo=github" height="30" alt="Github">](https://github.com/nidaulzafar)
+[<img src="https://img.shields.io/badge/-Nuha Azazi-222?logo=github" height="30" alt="Github">](https://github.com/noshacode)
+[<img src="https://img.shields.io/badge/-Yusuf Demir-000?logo=github" height="30" alt="Github">](https://github.com/yusufDemir9110)
+
+## Acknowledgments
+
+The team would like to acknowledge a number of people who helped us get through this project.
+
+- DevOps for the project [Rob van Kruijsdijk](https://github.com/robvk)
+- TechLead [Josja Heerema](https://github.com/J05J4)
+- Scrum Master [Larissa Sharkie](https://www.linkedin.com/in/larissa-sharkie-6a888553/)
+- Product Owner [Michelle Audiffred](https://www.linkedin.com/in/michelleaudiffred/)
+- Last but not least the numerous mentors and the [HackYourFuture Team](https://github.com/HackYourFuture) for their untiring guidance and efforts.
