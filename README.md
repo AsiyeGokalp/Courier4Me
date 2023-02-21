@@ -58,9 +58,6 @@ client
 |   |     └── courier
 |   |     |      └── ActiveDeliveriesForCourier.jsx
 |   |     |      └── ActiveDeliveriesForCustomer.jsx
-|   |     |      └── ApprovedDelivery.jsx
-|   |     |      └── DeclinedDelivery.jsx
-|   |     |      └── PendingDelivery.jsx
 |   |     └── footer
 |   |     |      └── footer.css
 |   |     |      └── Footer.jsx
